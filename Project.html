@@ -12,14 +12,14 @@
             padding: 0;
             font-family: Arial, sans-serif;
             align-items: center;
-            background-color:#181818;
+            background-color: #181818;
             color: #ffffff;
             overflow-x: hidden;
         }
 
         /* Header styles */
         header {
-            background-color:#181818;
+            background-color: #181818;
             padding: 1rem;
             display: flex;
             justify-content: space-between;
@@ -29,7 +29,7 @@
 
         header a {
             text-decoration: none;
-            background-color:#181818;
+            background-color: #181818;
             color: #f4f1ed;
             margin-right: 1rem;
         }
@@ -63,11 +63,38 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
+            nav{
+                
+                display: flex;
+                justify-content: center;
+                padding-left: 15px;
+                margin-left: 4rem;
+                margin-top: 3rem;
+            }
+            .logo{
+                align-items: center;
+                margin: auto;
+                padding: auto;
+            }
+            .main-footer-content{
+                width: 100%;
+            }
+            .readmore-button{
+                color: #fff;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+
         }
 
         @media (min-width: 768px) {
             main {
+
                 flex-direction: row;
                 justify-content: space-between;
             }
@@ -187,13 +214,22 @@
                 background-color: #0056b3;
             }
 
+            @media (max-width: 768px) {
+                .inner-text-area p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 200px;
+                }
+            }
+
         }
     </style>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="./src/image/Mula Global.png " style="width: 70%; margin-left: 4rem;"></a>
+        <a href="index.html"><img src="./src/image/Mula Global.png " class="logo" style="width: 70%; margin-left: 4rem;"></a>
         <nav style="margin-right: 3rem; width: 350px;">
             <a href="index.html" style="margin-right:3rem;">HOME</a>
             <a href="Project.html" style="margin-right: 3rem;">PROJECT</a>
@@ -256,8 +292,7 @@
             <div class="image-area" style="display: grid; grid-template-columns: 1fr 1fr;">
 
                 <div class="text-area" style="display: grid; justify-content: flex-end;">
-                    <div class="inner-text-area"
-                        style="padding: 20px; border-radius: 5px; width: 40%; padding-left: 40%;">
+                    <div class="inner-text-area" style="padding: 20px; border-radius: 5px; width: 40%; padding-left: 40%;">
                         <p>
                             This is some features we added to support functionality and use within the system. In order
                             to work more smoothly
@@ -328,9 +363,11 @@
             <section class="footer-icons">
                 <a class="footer-some" href="#"><img src="https://cdn.lindberg.com/assets/2023/svg/instagram.svg"
                         alt="Visit LINDBERG on Instagram" /></a>
-                <a class="footer-some" href="https://www.facebook.com/Mulawork.co.th"><img src="https://cdn.lindberg.com/assets/2023/svg/facebook.svg"
+                <a class="footer-some" href="https://www.facebook.com/Mulawork.co.th"><img
+                        src="https://cdn.lindberg.com/assets/2023/svg/facebook.svg"
                         alt="Visit LINDBERG on Facebook" /></a>
-                <a class="footer-some" href="https://www.linkedin.com/in/mulawork-thailand-194b16245/"><img src="https://cdn.lindberg.com/assets/2023/svg/linkedin.svg"
+                <a class="footer-some" href="https://www.linkedin.com/in/mulawork-thailand-194b16245/"><img
+                        src="https://cdn.lindberg.com/assets/2023/svg/linkedin.svg"
                         alt="Visit LINDBERG on LinkedIn" /></a>
                 <a class="footer-some" href="#"
                     onclick="document.getElementById('wechatqr').style.display = 'block'; return false;"><img
@@ -341,6 +378,20 @@
             </section>
         </div>
     </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var paragraph = document.querySelector('.inner-text-area p');
+            var maxWidth =100; // จำนวนตัวอักษรที่ต้องการให้แสดง
+            var text = paragraph.innerText;
+
+            if (window.innerWidth < 768) { // เมื่อหน้าจอเล็กลง
+                if (text.length > maxWidth) {
+                    text = text.substr(0, maxWidth) + '...';
+                    paragraph.innerText = text;
+                }
+            }
+        });
+    </script>
 
 </body>
 
