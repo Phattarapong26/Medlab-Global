@@ -30,6 +30,13 @@
             margin-right: 1rem;
         }
 
+        /* Navbar styles */
+        nav {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
         /* Main content styles */
         main {
             display: flex;
@@ -59,6 +66,11 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -119,9 +131,9 @@
 
     <header>
         <a href="index.html"><img src="./src/image/Mula GlobalWt.png" style="width: 70%; margin-left: 4rem;"></a>
-        <nav style="margin-right: 3rem; width: 350px;">
-            <a href="index.html" style="margin-right:3rem;">HOME</a>
-            <a href="Project.html" style="margin-right: 3rem;">PROJECT</a>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="Project.html">PROJECT</a>
             <a href="#">CONTACT</a>
         </nav>
     </header>
@@ -156,8 +168,7 @@
                     <p3>Subtitles : Smart App for management</p3><br><br>
                     <p1>Medlab Warehouse is a software solution. that we created for
                         Solve the problem of drug warehouse management and increase efficiency in warehouse management </p1><br><br>
-                        <a href="Project.html" class="readmore-button"
-                        style="background-color: #92846A; padding: 10px;color: #e2e2e2;border-radius: 10px;">Readmore</a>
+                    <a href="Project.html" class="readmore-button" style="background-color: #92846A; padding: 10px;color: #e2e2e2;border-radius: 10px;">Readmore</a>
                 </div>
             </div>
         </div>
@@ -166,22 +177,14 @@
 
     <footer>
 
-        <div class="main-footer-content"
-            style="width: 100%;margin: 0 auto; background-color: #f4f1ed; padding: 40px;line-height: 19px;font-size: 16px;flex-direction: column; border-bottom: none;display: flex; ;">
+        <div class="main-footer-content" style="width: 100%;margin: 0 auto; background-color: #f4f1ed; padding: 40px;line-height: 19px;font-size: 16px;flex-direction: column; border-bottom: none;display: flex; ;">
 
             <section class="footer-icons">
-                <a class="footer-some" href="#"><img src="https://cdn.lindberg.com/assets/2023/svg/instagram.svg"
-                        alt="Visit LINDBERG on Instagram" /></a>
-                <a class="footer-some" href="https://www.facebook.com/Mulawork.co.th"><img src="https://cdn.lindberg.com/assets/2023/svg/facebook.svg"
-                        alt="Visit LINDBERG on Facebook" /></a>
-                <a class="footer-some" href="https://www.linkedin.com/in/mulawork-thailand-194b16245/"><img src="https://cdn.lindberg.com/assets/2023/svg/linkedin.svg"
-                        alt="Visit LINDBERG on LinkedIn" /></a>
-                <a class="footer-some" href="#"
-                    onclick="document.getElementById('wechatqr').style.display = 'block'; return false;"><img
-                        src="https://cdn.lindberg.com/assets/2023/svg/wechat.svg" alt="Visit LINDBERG on WeChat" /></a>
-                <img class="footer-some" id="wechatqr" src="https://cdn.lindberg.com/assets/2020/wechatbarcode.png"
-                    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; opacity: 1; object-fit: none; background: gray; display:none; pointer-events:all"
-                    onclick="this.style.display = 'none'" />
+                <a class="footer-some" href="#"><img src="https://cdn.lindberg.com/assets/2023/svg/instagram.svg" alt="Visit LINDBERG on Instagram" /></a>
+                <a class="footer-some" href="https://www.facebook.com/Mulawork.co.th"><img src="https://cdn.lindberg.com/assets/2023/svg/facebook.svg" alt="Visit LINDBERG on Facebook" /></a>
+                <a class="footer-some" href="https://www.linkedin.com/in/mulawork-thailand-194b16245/"><img src="https://cdn.lindberg.com/assets/2023/svg/linkedin.svg" alt="Visit LINDBERG on LinkedIn" /></a>
+                <a class="footer-some" href="#" onclick="document.getElementById('wechatqr').style.display = 'block'; return false;"><img src="https://cdn.lindberg.com/assets/2023/svg/wechat.svg" alt="Visit LINDBERG on WeChat" /></a>
+                <img class="footer-some" id="wechatqr" src="https://cdn.lindberg.com/assets/2020/wechatbarcode.png" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; opacity: 1; object-fit: none; background: gray; display:none; pointer-events:all" onclick="this.style.display = 'none'" />
             </section>
         </div>
     </footer>
