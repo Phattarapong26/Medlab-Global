@@ -61,20 +61,54 @@
                 flex-direction: column;
                 margin-left: 1rem;
             }
-            nav{
-                
+
+            nav {
+
                 display: flex;
                 justify-content: center;
                 padding-left: 15px;
                 margin-left: 4rem;
                 margin-top: 3rem;
             }
-            .logo{
+
+            .logo {
                 align-items: center;
                 margin: auto;
                 padding: auto;
             }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+               
+                justify-content: space-between;
+               
+            }
+
         }
+
+        @media (max-width: 768px) {
+            .columPro {
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .columPro .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+
+            }
+
+            .columPro h1 {
+                font-size: 20px;
+              
+            }
+        }
+
 
         @media (min-width: 768px) {
             main {
@@ -130,77 +164,83 @@
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <a href="index.html"><img src="./src/image/Mula GlobalWt.png" class="logo"
+                    style="width: 70%; margin-left: 4rem;"></a>
+            <nav style="margin-right: 3rem; width: 350px;">
+                <a href="index.html" style="margin-right:3rem;">HOME</a>
+                <a href="Project.html" style="margin-right: 3rem;">PROJECT</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </header>
 
-    <header>
-        <a href="index.html"><img src="./src/image/Mula GlobalWt.png" class="logo" style="width: 70%; margin-left: 4rem;"></a>
-        <nav style="margin-right: 3rem; width: 350px;">
-            <a href="index.html" style="margin-right:3rem;">HOME</a>
-            <a href="Project.html" style="margin-right: 3rem;">PROJECT</a>
-            <a href="#">CONTACT</a>
-        </nav>
-    </header>
-
-    <main style="display: grid;">
-        <div>
-            <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
-                <source src="./src/image/HomeMain/bannerHome.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div>
-            <aside style="display: grid; justify-content: center; text-align: center;">
+        <main style="display: grid;">
+            <div>
                 <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="./src/image/HomeMain/aboutHome.mov" type="video/mp4">
+                    <source src="./src/image/HomeMain/bannerHome.mp4" type="video/mp4">
                 </video>
-                <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="./src/image/HomeMain/CoreValueHome.mp4" type="video/mp4">
-                </video>
-                <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="./src/image/HomeMain/TeamHome.mp4" type="video/mp4">
-                </video>
-            </aside>
-        </div>
-        <div class="columPro" style="display: grid; justify-content: center;width: 100vh; margin: auto; text-align: center;">
-            <h1>PROJECT ROADMAP</h1>
-            <div class="card" style="display: flex; margin-top: 3rem; padding: 20px; background-color: #e2e2e2; border-radius: 20px;">
-                <div>
-                    <img src="./src/image/FUNC.mov" width="350px">
-                </div>
-                <div style="width: 300px; padding: 10px;">
-                    <h3>App Warehouse</h3>
-                    <p3>Subtitles : Smart App for management</p3><br><br>
-                    <p1>Medlab Warehouse is a software solution. that we created for
-                        Solve the problem of drug warehouse management and increase efficiency in warehouse management </p1><br><br>
+            </div>
+            <div>
+                <aside style="display: grid; justify-content: center; text-align: center;">
+                    <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./src/image/HomeMain/aboutHome.mov" type="video/mp4">
+                    </video>
+                    <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./src/image/HomeMain/CoreValueHome.mp4" type="video/mp4">
+                    </video>
+                    <video id="video-player" autoplay muted style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="./src/image/HomeMain/TeamHome.mp4" type="video/mp4">
+                    </video>
+                </aside>
+            </div>
+            <div class="columPro"
+                style="display: grid; justify-content: center;width: 100vh; margin: auto; text-align: center;">
+                <h1>PROJECT ROADMAP</h1>
+                <div class="card"
+                    style="display: flex; margin-top: 3rem; padding: 20px; background-color: #e2e2e2; border-radius: 20px;">
+                    <div>
+                        <img src="./src/image/FUNC.mov" width="350px">
+                    </div>
+                    <div style="width: 300px; padding: 10px;">
+                        <h3>App Warehouse</h3>
+                        <p3>Subtitles : Smart App for management</p3><br><br>
+                        <p1>Medlab Warehouse is a software solution. that we created for
+                            Solve the problem of drug warehouse management and increase efficiency in warehouse
+                            management </p1><br><br>
                         <a href="Project.html" class="readmore-button"
-                        style="background-color: #92846A; padding: 10px;color: #e2e2e2;border-radius: 10px;">Readmore</a>
+                            style="background-color: #92846A; padding: 10px;color: #e2e2e2;border-radius: 10px;">Readmore</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
 
-    <footer>
+        <footer>
 
-        <div class="main-footer-content"
-            style="width: 100%;margin: 0 auto; background-color: #f4f1ed; padding: 40px;line-height: 19px;font-size: 16px;flex-direction: column; border-bottom: none;display: flex; ;">
+            <div class="main-footer-content"
+                style="width: 100%;margin: 0 auto; background-color: #f4f1ed; padding: 40px;line-height: 19px;font-size: 16px;flex-direction: column; border-bottom: none;display: flex; ;">
 
-            <section class="footer-icons">
-                <a class="footer-some" href="#"><img src="https://cdn.lindberg.com/assets/2023/svg/instagram.svg"
-                        alt="Visit LINDBERG on Instagram" /></a>
-                <a class="footer-some" href="https://www.facebook.com/Mulawork.co.th"><img
-                        src="https://cdn.lindberg.com/assets/2023/svg/facebook.svg"
-                        alt="Visit LINDBERG on Facebook" /></a>
-                <a class="footer-some" href="https://www.linkedin.com/in/mulawork-thailand-194b16245/"><img
-                        src="https://cdn.lindberg.com/assets/2023/svg/linkedin.svg"
-                        alt="Visit LINDBERG on LinkedIn" /></a>
-                <a class="footer-some" href="#"
-                    onclick="document.getElementById('wechatqr').style.display = 'block'; return false;"><img
-                        src="https://cdn.lindberg.com/assets/2023/svg/wechat.svg" alt="Visit LINDBERG on WeChat" /></a>
-                <img class="footer-some" id="wechatqr" src="https://cdn.lindberg.com/assets/2020/wechatbarcode.png"
-                    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; opacity: 1; object-fit: none; background: gray; display:none; pointer-events:all"
-                    onclick="this.style.display = 'none'" />
-            </section>
-        </div>
-    </footer>
+                <section class="footer-icons">
+                    <a class="footer-some" href="#"><img src="https://cdn.lindberg.com/assets/2023/svg/instagram.svg"
+                            alt="Visit LINDBERG on Instagram" /></a>
+                    <a class="footer-some" href="https://www.facebook.com/Mulawork.co.th"><img
+                            src="https://cdn.lindberg.com/assets/2023/svg/facebook.svg"
+                            alt="Visit LINDBERG on Facebook" /></a>
+                    <a class="footer-some" href="https://www.linkedin.com/in/mulawork-thailand-194b16245/"><img
+                            src="https://cdn.lindberg.com/assets/2023/svg/linkedin.svg"
+                            alt="Visit LINDBERG on LinkedIn" /></a>
+                    <a class="footer-some" href="#"
+                        onclick="document.getElementById('wechatqr').style.display = 'block'; return false;"><img
+                            src="https://cdn.lindberg.com/assets/2023/svg/wechat.svg"
+                            alt="Visit LINDBERG on WeChat" /></a>
+                    <img class="footer-some" id="wechatqr" src="https://cdn.lindberg.com/assets/2020/wechatbarcode.png"
+                        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; opacity: 1; object-fit: none; background: gray; display:none; pointer-events:all"
+                        onclick="this.style.display = 'none'" />
+                </section>
+            </div>
+        </footer>
+    </div>
 
 </body>
 
